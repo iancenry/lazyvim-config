@@ -6,3 +6,23 @@ debug
 foo.*
 *.log
 data
+
+# Nvim plugin cache & backups
+plugin/
+pack/
+session/
+swap/
+undo/
+*.swp
+
+# Lazy plugin manager cache
+lazy-lock.json
+
+# Environment files (secrets)
+.env
+.env.local
+.env.*
+
+# System files
+.DS_Store
+
