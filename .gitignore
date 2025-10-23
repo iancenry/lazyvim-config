@@ -1,28 +1,38 @@
-tt.*
-.tests
-doc/tags
-debug
-.repro
-foo.*
-*.log
-data
+i# -------------------------------
+# Neovim Git Ignore Template
+# For LazyVim or Lazy.nvim setups
+# -------------------------------
 
-# Nvim plugin cache & backups
+# Plugin manager cache & temporary files
 plugin/
 pack/
+site/
 session/
 swap/
 undo/
+view/
 *.swp
+*.swo
+*.bak
 
-# Lazy plugin manager cache
-lazy-lock.json
+# Lazy plugin manager lock file
+# (Optional — commit this if you want pinned plugin versions)
+# lazy-lock.json
 
-# Environment files (secrets)
+# Environment or secret files
 .env
 .env.local
 .env.*
+secrets.json
+apikeys.lua
 
-# System files
+# OS / system files
 .DS_Store
+Thumbs.db
+
+# Logs and backups
+log/
+*.log
+*.old
+*.backup
 
