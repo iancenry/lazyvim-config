@@ -9,7 +9,7 @@ return {
     opts = function(_, opts)
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
         -- Lua patterns (not globs)
-        file_ignore_patterns = { "%.git/", "node_modules/", ".output/" },
+        file_ignore_patterns = { "%.git/", "node_modules/", "node_modules", ".output/" },
         -- ripgrep args (these ARE globs where applicable)
         vimgrep_arguments = {
           "rg",
