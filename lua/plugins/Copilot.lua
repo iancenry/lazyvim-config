@@ -5,25 +5,19 @@ return {
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
-        suggestion = { enabled = true },
+        suggestion = { enabled = false }, -- Disable, using blink-copilot instead
         panel = { enabled = true },
         filetypes = {
           markdown = true,
           help = false,
           gitcommit = true,
           gitrebase = true,
-          ["*"] = true, -- enable for all other filetypes
+          ["*"] = true,
         },
       })
     end,
   },
 
-  -- Optional: bridge Copilot with nvim-cmp (autocomplete)
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
+  -- Disable copilot-cmp (incompatible with blink.cmp)
+  { "zbirenbaum/copilot-cmp", enabled = false },
 }
