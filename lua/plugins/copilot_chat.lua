@@ -7,9 +7,10 @@ return {
     user = user:sub(1, 1):upper() .. user:sub(2)
     return {
       auto_insert_mode = true,
+      model = "claude-opus-4.5", -- or "gpt-4o", use <leader>am to switch
       headers = {
-        user = "  " .. user .. " ",
-        assistant = "  Copilot ",
+        user = "  " .. user .. " ",
+        assistant = "   Copilot ",
         tool = "󰊳  Tool ",
       },
       window = {
@@ -19,7 +20,7 @@ return {
   end,
   keys = {
     {
-      "<C-s>", -- Use Ctrl+S to submit
+      "<C-s>",
       function()
         require("CopilotChat").send()
       end,
@@ -65,6 +66,15 @@ return {
         require("CopilotChat").select_prompt()
       end,
       desc = "Prompt Actions (CopilotChat)",
+      mode = { "n", "x" },
+      silent = true,
+    },
+    {
+      "<leader>am",
+      function()
+        require("CopilotChat").select_model()
+      end,
+      desc = "Select Model (CopilotChat)",
       mode = { "n", "x" },
       silent = true,
     },
