@@ -13,5 +13,14 @@ return {
         },
       },
     },
+    terminal = {
+      win = {
+        border = "rounded",
+        position = "float",
+        backdrop = 60,
+        width = 0.85,
+        height = 0.8,
+      },
+    },
   },
 }
