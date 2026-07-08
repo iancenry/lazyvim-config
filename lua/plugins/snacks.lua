@@ -6,15 +6,15 @@ return {
         files = {
           hidden = true,
           ignored = true,
-          exclude = { "node_modules", ".git", ".turbo", "dist" },
+          exclude = { "node_modules", ".git", ".turbo", "dist", "out", "build", "tmp", "coverage", "Pods" },
         },
         grep = {
-          glob = { "!node_modules/", "!.turbo/", "!dist/" },
+          glob = { "!node_modules/", "!.turbo/", "!dist/", "!out/", "!build/", "!tmp/", "!coverage/", "!Pods/" },
         },
         explorer = {
           hidden = true,
           ignored = true,
-          exclude = { "node_modules", ".git", ".turbo", "dist" },
+          exclude = { "node_modules", ".git", ".turbo", "dist", "out", "build", "tmp", "coverage", "Pods" },
         },
       },
     },
