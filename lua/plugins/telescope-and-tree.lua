@@ -23,7 +23,7 @@ return {
           "--glob",
           "!**/.git/*",
           "--glob",
-          "!**/node_modules/*",
+          "!**/node_modules/**",
           "--glob",
           "!**/.output/*",
           "--glob",
