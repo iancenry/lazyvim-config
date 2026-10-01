@@ -1,3 +1,4 @@
--- LazyVim uses blink.cmp with blink-copilot for completion
+-- LazyVim uses blink.cmp for completion
+-- blink-copilot is not installed; Copilot was removed
 -- No additional configuration needed
 return {}
